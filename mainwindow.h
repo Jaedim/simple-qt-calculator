@@ -33,6 +33,20 @@ private slots:
     void on_button_8_clicked();
     void on_button_9_clicked();
 
+    void on_button_plus_clicked();
+
+    void on_button_minus_clicked();
+
+    void on_button_multiply_clicked();
+
+    void on_button_divide_clicked();
+
+    void on_button_equals_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_button_dot_clicked();
+
 private:
     Ui::MainWindow *ui;
     QLineEdit *echoLineEdit;

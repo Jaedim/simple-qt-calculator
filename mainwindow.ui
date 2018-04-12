@@ -359,7 +359,7 @@
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="equals">
+   <widget class="QPushButton" name="button_equals">
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -431,6 +431,27 @@
      </size>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>70</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>CLR</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -494,7 +515,7 @@
   <tabstop>button_minus</tabstop>
   <tabstop>button_multiply</tabstop>
   <tabstop>button_divide</tabstop>
-  <tabstop>equals</tabstop>
+  <tabstop>button_equals</tabstop>
   <tabstop>button_0</tabstop>
   <tabstop>button_dot</tabstop>
  </tabstops>

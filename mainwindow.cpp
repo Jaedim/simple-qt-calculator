@@ -2,19 +2,16 @@
 #include "ui_mainwindow.h"
 #include "aboutdialog.h"
 
+#include "calculator.h"
+
 #include <iostream>
-#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    //echoLineEdit = new QLineEdit;
-    //echoLineEdit->setPlaceholderText("This is here dude");
-    //echoLineEdit->setFocus();
-
     ui->setupUi(this);
-    //setCentralWidget(echoLineEdit);
+    ui->equation_line->setPlaceholderText("Type or click your equation here");
 }
 
 MainWindow::~MainWindow()
@@ -84,6 +81,11 @@ void MainWindow::on_button_9_clicked()
     ui->equation_line->insert("9");
 }
 
+void MainWindow::on_button_dot_clicked()
+{
+    ui->equation_line->insert(".");
+}
+
 void MainWindow::on_button_plus_clicked()
 {
     ui->equation_line->insert("+");
@@ -94,7 +96,7 @@ void MainWindow::on_button_multiply_clicked()
     ui->equation_line->insert("×");
 }
 
-void MainWindow::on_button_subtract_clicked()
+void MainWindow::on_button_minus_clicked()
 {
     ui->equation_line->insert("-");
 }
@@ -102,4 +104,19 @@ void MainWindow::on_button_subtract_clicked()
 void MainWindow::on_button_divide_clicked()
 {
     ui->equation_line->insert("/");
+}
+
+void MainWindow::on_button_equals_clicked()
+{
+    QString equation = ui->equation_line->text();
+    ui->equation_line->clear();
+
+    Calculator calculator;
+    calculator.calculate(equation);
+    ui->equation_line->insert(calculator.output());
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    ui->equation_line->clear();
 }
